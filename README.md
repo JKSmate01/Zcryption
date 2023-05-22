@@ -4,8 +4,8 @@ Zcryption is a Python program designed to encrypt and decrypt files using passwo
 # Prerequisites
 Make sure you have the following libraries installed:
 
-pyzipper
-openpyxl
+- pyzipper
+- openpyxl
 shutil
 tqdm
 You can install these libraries using the following commands:
