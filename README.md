@@ -23,8 +23,8 @@ You can install these libraries using the following commands:
 3. Run the program by executing the Zcryption.exe file.
 4. The program will prompt you with three options:
    - Encode (e): Encrypt files in the specified directory.
- - Decode (d): Decrypt files in the specified directory.
- - Delete All Data (delete): Delete all data in the list.
+   - Decode (d): Decrypt files in the specified directory.
+   - Delete All Data (delete): Delete all data in the list.
 Choose the desired option by entering the corresponding command (e, d, or delete).
 
 Depending on your selection, the program will perform the following actions:
