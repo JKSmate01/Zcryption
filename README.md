@@ -30,7 +30,7 @@ You can install these libraries using the following commands:
    - Encode (e): Encrypt files in the specified directory and update the list.
    - Decode (d): Decrypt files in the specified directory using the passwords from the list.
    - Delete All Data (delete): Remove all data from the list.
- For encryption, the program reads file information from an Excel file named list.xlsx located in the specified directory. The file should have the following columns:
+- For encryption, the program reads file information from an Excel file named list.xlsx located in the specified directory. The file should have the following columns:
 
 Column A: File name
 Column B: Description
