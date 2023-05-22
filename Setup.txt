@@ -1,0 +1,4 @@
+#py -3 -m pip install pyzipper
+#py -3 -m pip install openpyxl
+#py -3 -m pip install shutil
+#py -3 -m pip install tqdm
