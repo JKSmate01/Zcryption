@@ -6,6 +6,7 @@ Make sure you have the following libraries installed:
 
 - pyzipper
 - openpyxl
-shutil
-tqdm
+- shutil
+- tqdm
+
 You can install these libraries using the following commands:
