@@ -40,3 +40,6 @@ You can install these libraries using the following commands:
 - For decryption, the program extracts files from the password-protected zip archives using the passwords from the list.
 
 Feel free to modify the program according to your specific requirements or extend its functionality as needed.
+
+# Author
+Zcryption is developed by Máté Jakus.
