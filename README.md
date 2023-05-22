@@ -11,9 +11,9 @@ Make sure you have the following libraries installed:
 
 You can install these libraries using the following commands:
 ```bash 
- py -3 -m pip install pyzipper
- py -3 -m pip install openpyxl
- py -3 -m pip install shutil
- py -3 -m pip install tqdm
+ pip install pyzipper
+ pip install openpyxl
+ pip install shutil
+ pip install tqdm
 ```
 
