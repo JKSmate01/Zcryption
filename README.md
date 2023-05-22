@@ -19,14 +19,13 @@ You can install these libraries using the following commands:
 
 # Usage
 1. Clone or download the program files from the GitHub repository.
-2. Open a terminal or command prompt and navigate to the program directory.
-3. Run the program by executing the Zcryption.exe file.
-4. The program will prompt you with three options:
+2. Run the program by executing the Zcryption.exe file.
+3. The program will prompt you with three options:
    - Encode (e): Encrypt files in the specified directory.
    - Decode (d): Decrypt files in the specified directory.
    - Delete All Data (delete): Delete all data in the list.
-5. Choose the desired option by entering the corresponding command (e, d, or delete).
-6. Depending on your selection, the program will perform the following actions:
+4. Choose the desired option by entering the corresponding command (e, d, or delete).
+5. Depending on your selection, the program will perform the following actions:
    - Encode (e): Encrypt files in the specified directory and update the list.
    - Decode (d): Decrypt files in the specified directory using the passwords from the list.
    - Delete All Data (delete): Remove all data from the list.
