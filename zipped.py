@@ -5,12 +5,14 @@
 import pyzipper
 import random as rn
 import os
+import sys
 import string
 from openpyxl import load_workbook
 from datetime import datetime
 import shutil
 from tqdm import tqdm
 print("Zcryption Made by Máté Jakus")
+print("Version: 1.0.1")
 print("")
 loc_f = ""
 try:
@@ -24,7 +26,13 @@ if (loc_f == "" or loc_f == None):
         f.write(loc)
     loc_f = loc
 PATH = f"{loc_f}list.xlsx"
-wb = load_workbook(PATH,data_only=True)
+try:
+    wb = load_workbook(PATH,data_only=True)
+except:
+    print("Please make sure that you have accurately specified the path to the 'list.xlsx' file. Error(01) List.xlsx doesn't exist!")
+    print(f"{PATH}")
+    inp = input("")
+    exit()
 page = wb["Munka1"]
 SEED = ""
 folder = r'.\\'
