@@ -38,7 +38,7 @@ You can install these libraries using the following commands:
 
 **DO NOT RENAME OR MODIFY THE 'list.xlsx' FILE!**
 
-**FOR SAFETY DO NOT KEEP YOUR 'list.xlsx' FILE IN THE SAME FOLDER OR DIRECTORY. IF SOMEONE MANAGES TO STEAL THAT FILE THEY COULD DECRYPT ALL YOUR ZIP ARCHIVES!**
+**FOR SAFETY DO NOT KEEP YOUR 'list.xlsx' FILE IN THE SAME FOLDER OR DIRECTORY. IF SOMEONE MANAGES TO STEAL THAT FILE, THEY COULD DECRYPT ALL YOUR ZIP ARCHIVES!**
 
 - The program creates **password-protected zip archives for each file** in the list, using the corresponding password and destination file name. It also updates the list with the encrypted file information.
 - For **decryption**, the program **extracts files from the password-protected zip archives** **using** the passwords from **the list**.
