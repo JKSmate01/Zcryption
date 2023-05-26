@@ -15,16 +15,34 @@ print("Zcryption Made by Máté Jakus")
 print("Version: 1.0.1")
 print("")
 loc_f = ""
+def create_password_protected_zip(zip_name, file_path, password):
+    with pyzipper.AESZipFile(zip_name, 'w', compression=pyzipper.ZIP_DEFLATED, encryption=pyzipper.WZ_AES) as zipf:
+        zipf.setpassword(password.encode('utf-8'))
+        zipf.write(file_path)
+def extract_password_protected_zip(zip_name, output_dir, password):
+    with pyzipper.AESZipFile(zip_name, 'r') as zipf:
+        zipf.setpassword(password.encode('utf-8'))
+        zipf.extractall(output_dir)
 try:
     with open(".\\save.txt","r",encoding="utf-8") as f:
         loc_f = f.readlines()[0]
 except:
-    pass
+    if (os.path.isfile(".\\save.zip")):
+        paswd = input("Password: ")
+        extract_password_protected_zip(".\\save.zip",".\\",paswd)
+        with open(".\\save.txt","r",encoding="utf-8") as f:
+            loc_f = f.readlines()[0]
+        os.remove(".\\save.txt")
 if (loc_f == "" or loc_f == None):
     loc = input("Set TEMP folder (....\\TEMP\\): ")
+    wpswd = input("Encrypt save.txt file (y/n)? ")
     with open(".\\save.txt", "w", encoding="utf-8") as f:
         f.write(loc)
     loc_f = loc
+    if (wpswd == "y"):
+        passwd = input("Set password: ")
+        create_password_protected_zip("save.zip",".\\save.txt",passwd)
+        os.remove(".\\save.txt")
 PATH = f"{loc_f}list.xlsx"
 try:
     wb = load_workbook(PATH,data_only=True)
@@ -46,14 +64,6 @@ for row in page["A2":"A100000"]:
 for i in range(fnum):
     files.append((page[f"A{i+2}"].value,page[f"B{i+2}"].value,page[f"C{i+2}"].value))
 #print(files)
-def create_password_protected_zip(zip_name, file_path, password):
-    with pyzipper.AESZipFile(zip_name, 'w', compression=pyzipper.ZIP_DEFLATED, encryption=pyzipper.WZ_AES) as zipf:
-        zipf.setpassword(password.encode('utf-8'))
-        zipf.write(file_path)
-def extract_password_protected_zip(zip_name, output_dir, password):
-    with pyzipper.AESZipFile(zip_name, 'r') as zipf:
-        zipf.setpassword(password.encode('utf-8'))
-        zipf.extractall(output_dir)
 def ra(fnum):
     fnum += 1
     for fn in tqdm(os.listdir(folder)):
