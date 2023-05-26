@@ -54,7 +54,7 @@ except:
 page = wb["Munka1"]
 SEED = ""
 folder = r'.\\'
-unw = ["Zcryption.exe","TEMP","main.py","list.txt","venv",".idea",".git","save.txt","zipped.py"]
+unw = ["Zcryption.exe","TEMP","main.py","list.txt","venv",".idea",".git","save.txt","save.zip","zipped.py"]
 files = []
 fnum = 0
 for row in page["A2":"A100000"]:
