@@ -14,6 +14,7 @@ from tqdm import tqdm
 print("Zcryption Made by Máté Jakus")
 print("Version: 1.0.1")
 print("")
+
 loc_f = ""
 def create_password_protected_zip(zip_name, file_path, password):
     with pyzipper.AESZipFile(zip_name, 'w', compression=pyzipper.ZIP_DEFLATED, encryption=pyzipper.WZ_AES) as zipf:
@@ -29,6 +30,10 @@ try:
 except:
     if (os.path.isfile(".\\save.zip")):
         paswd = input("Password: ")
+        os.system('cls')
+        print("Zcryption Made by Máté Jakus")
+        print("Version: 1.0.1")
+        print("")
         extract_password_protected_zip(".\\save.zip",".\\",paswd)
         with open(".\\save.txt","r",encoding="utf-8") as f:
             loc_f = f.readlines()[0]
@@ -43,6 +48,10 @@ if (loc_f == "" or loc_f == None):
         passwd = input("Set password: ")
         create_password_protected_zip("save.zip",".\\save.txt",passwd)
         os.remove(".\\save.txt")
+        os.system('cls')
+        print("Zcryption Made by Máté Jakus")
+        print("Version: 1.0.1")
+        print("")
 PATH = f"{loc_f}list.xlsx"
 try:
     wb = load_workbook(PATH,data_only=True)
